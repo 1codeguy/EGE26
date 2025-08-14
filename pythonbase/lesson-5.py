@@ -12,10 +12,6 @@ print(r.randint(1,100))
 from random import randint
 print(randint(1,100))
 
-# Подключение одной команды из библиотеки
-from random import randint
-print(randint(1,100))
-
 # Подключение одной команды из библиотеки через псевдоним
 from random import randint as ri
 print(ri(1,100))
