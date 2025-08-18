@@ -6,5 +6,3 @@ num1 /= 9
 num1 *= 1000
 num1 //= 1000
 print(num1)
-
-
