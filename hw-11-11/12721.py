@@ -11,7 +11,7 @@ for n in range(1, 100_000):
     k = 0
     r = convert(n, 8)
     while r != 0:
-        if int(r[-1:], 8) % 2 != 0:
+        if map(int, r) % 2 != 0:
             k += 1
             l = int(r, 8)
             int(r, 8) //= 8
