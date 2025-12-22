@@ -9,4 +9,4 @@ for val in set(permutations('ПАРИЖАНКА')):
     if val.count('**') == 1 and '***' not in val and '****' not in val:
         ans.append(val)
 
-print(len(ans))gret vefgrh
+print(len(ans))
