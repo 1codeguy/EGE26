@@ -1,6 +1,6 @@
 # from re import*
 
-with open(r'./files/24_25361.txt') as file:
+with open(r'../files/24_25361.txt') as file:
     data = file.readline()
 
 for i in '02468':
