@@ -60,3 +60,26 @@ def convert2(num, sys):
         res += printable[num % sys]
         num //= sys
     return res[::-1]
+
+# Наибольший N при наибольшем R
+ans.append([R, N])
+print(max(ans))
+
+# Наибольший N при наименьшем R
+ans.append([R, N])
+ans = sorted(ans, key=lambda x:(x[0], -x[1]))
+print(ans[0])
+
+# Наименьший N при наименьшем R
+ans.append([R, N])
+print(min(ans))
+
+# Наименьший N при наибольшем R
+ans.append([R, N])
+ans = sorted(ans, key=lambda x:(-x[0], x[1]))
+print(ans[0])
+
+# Когда мы пишем lambda x, то мы обращаемся в каждой паре [R, N]
+# И в лямбде мы указываем порядок, по какому элементу сортировать в первую очередь, по какому во вторую
+# x[0] - сортировка по возрастанию
+# -x[0] - сортировка по убыванию
