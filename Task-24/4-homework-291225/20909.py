@@ -1,4 +1,4 @@
-with open(r'/Users/admin/Desktop/24_20909.txt') as file:
+with open(r'/Users/admin/Desktop/N24/24_20909.txt') as file:
     data = file.readline()
 
 # ans = 0
@@ -16,8 +16,13 @@ with open(r'/Users/admin/Desktop/24_20909.txt') as file:
 # print(ans)
 
 data = data.split('AB')
+
 ans = 0
 for i in range(len(data) - 100):
-    text = 'AB'.join(data[i:i+101])
-    ans = max(ans, len(text))
+    if i == 0 or i == len(data) - 101:
+        text = 'AB'.join(data[i:i+101])
+        ans = max(ans, len(text) + 1)
+    else:
+        text = 'AB'.join(data[i:i + 101])
+        ans = max(ans, len(text) + 2)
 print(ans)
