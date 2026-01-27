@@ -59,7 +59,7 @@ def convert2(num, sys):
     while num != 0:
         res += printable[num % sys]
         num //= sys
-    return res[::-1]
+    return res[::-1] if res else '0'
 
 # Наибольший N при наибольшем R
 ans.append([R, N])
