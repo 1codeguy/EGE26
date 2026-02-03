@@ -1,4 +1,3 @@
-```
 with open(r'/Users/admin/Desktop/N24/24_11667.txt') as file:
     data = file.readline()
 
@@ -12,4 +11,3 @@ for i in range(len(data) - 1000):
         ans = max(ans, len('INFINITY'.join(data[i:i + 1001])) + 14)
 
 print(ans)
-```
