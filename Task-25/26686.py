@@ -1,3 +1,4 @@
+
 def fact(num):
     d = []
     while num % 2 == 0:
