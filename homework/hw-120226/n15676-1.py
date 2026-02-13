@@ -1,4 +1,3 @@
-```
 from fnmatch import fnmatch
 
 def is_not_prime(num):
@@ -21,4 +20,3 @@ ans.sort()
 
 for s in ans:
     print(*s)
-```
