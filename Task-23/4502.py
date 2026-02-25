@@ -5,4 +5,4 @@ def f(start, end, cnt=0):
     return f(start + 1, end) + f(start + 2, end) + f(start * 2, end)
 
 for i in range(34, 60):
-    print(f(1, i, cnt))
+    print(f(1, i))
