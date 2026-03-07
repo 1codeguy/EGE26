@@ -8,6 +8,7 @@ def f(x):
 
 lineA = [48, 83, 94, 100]
 linex = [50, 90, 96]
+
 ans = []
 for A1, A2 in combinations(lineA, 2):
     if all(f(x) for x in linex):
