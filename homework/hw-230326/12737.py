@@ -1,4 +1,3 @@
-```
 def f(x, y, s):
     if x + y >= 385: return s % 2 == 0
     if s == 0: return 0
@@ -11,4 +10,3 @@ def f(x, y, s):
 print('19)', *[x for x in range(1, 55) if f(x, 8, 2)])
 # print('20)', *[x for x in range(1, 55) if f(x, 8, 3) and not f(x, 8, 1)])
 # print('21)', *[x for x in range(1, 55) if f(x, 8, 4) and not f(x, 8, 2)])
-```
