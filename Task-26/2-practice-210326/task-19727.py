@@ -10,6 +10,8 @@ for bidon in delivery:
 
 free_space = M - sum(ans1[:-1])
 
+print(free_space)
+
 ans2 = sum(i > free_space for i in delivery)
 
 print(len(ans1), ans2)
