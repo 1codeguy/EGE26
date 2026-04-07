@@ -6,6 +6,9 @@ def f(x):
             return False
     return True
 
+cnt = 0
 for A in range(1, 1000):
     if f(A):
-        print(A)
+        cnt += 1
+
+print(cnt)
