@@ -9,3 +9,4 @@ def f(A):
 for A in range(0, 1000):
     if f(A):
         print(A)
+        break
