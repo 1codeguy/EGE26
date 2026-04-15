@@ -1,19 +1,25 @@
 with open(r'.\files\26.txt') as file:
-    N = file.readline()
-    sportsmen = [list(map(int, i.split())) for i in file]
+    N = int(file.readline())
+    check_points = {}
+    for i in file:
+        sportsman, point = map(int, i.split())
+        if point not in check_points:
+            check_points[point] = {sportsman}
+        else:
+            check_points[point].add(sportsman)
 
-N = 9
-sportsmen = [[41, 3], [43, 125], [50, 33], [42, 125], [42, 126], [42, 127], [41, 125], [50, 126], [42, 126]]
-sportsmen = sorted(sportsmen, key=lambda x: (x[0], -x[1]))
+ans = []
+for point in check_points:
+    sort_sportsmen = sorted(check_points[point])
+    cnt = 1
+    max_cnt = 0
+    for sp1, sp2 in zip(sort_sportsmen, sort_sportsmen[1:]):
+        if sp2 - sp1 == 1:
+            cnt += 1
+        else:
+            max_cnt = max(max_cnt, cnt)
+            cnt = 1
+    max_cnt = max(max_cnt, cnt)
+    ans.append([max_cnt, point])
 
-large_group = []
-small_group = [sportsmen[0]]
-
-
-for sportsman in sportsmen.copy()[1:]:
-    if sportsman[0] - small_group[-1][0] == 1:
-        small_group += sportsman
-        sportsmen.remove(sportsman)
-
-
-print(large_group)
+print(sorted(ans, key=lambda x: (-x[0], x[1]))[0])
