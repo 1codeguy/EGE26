@@ -12,8 +12,7 @@ def center(cluster):
 def new(cluster_1, clusters):
     new_clusters = []
     for cluster in clusters:
-        for dot in cluster:
-            new_clusters.append(dot)
+        new_clusters += cluster
     res = []
     for dot in cluster_1:
         sum_dist = sum(dist(dot, d) for d in new_clusters)
@@ -65,8 +64,5 @@ print(jaylin)
 
 news = [new(cluster, clusters.remove(cluster)) for cluster in clusters.copy()]
 
-
-for cluster in clusters.copy():
-    clusters = clusters.remove(cluster)
-    print(clusters)
+print(max(news))
 
