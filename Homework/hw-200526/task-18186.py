@@ -6,11 +6,11 @@ for i in 'AE':
 for i in 'BCDFGH':
     data = data.replace(i, '@')
 
-data = data.replace('@@#', '*** ')
-# print(data.find('@#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@***'))
-# print(data[2363480:2363486+62])
+data = data.replace('@@#', '*** ***')
+print(data.find('@#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@***'))
+print(data[2363480:2363486+62])
 
 data = data.split()
 
-print(len(max(data, key=len)) + 2)
+print(len(max(data, key=len)))
 print(max(data, key=len))
