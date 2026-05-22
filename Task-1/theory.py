@@ -1,6 +1,6 @@
 from itertools import permutations
-matrix = 'все строки из матрицы'.split()
 graph = 'все ребра из графа'.split()
+matrix = 'все строки из матрицы'.split()
 
 print(*range(1, 8)) # количество столбцов в матрице
 for i in permutations('названия вершин'):
