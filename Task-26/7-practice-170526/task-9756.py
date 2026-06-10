@@ -9,7 +9,6 @@ for time in times:
     if time[0] >= events[-1][1]:
         events.append(time)
 
-
 last_event = events.pop()
 for time in times[::-1]:
     if time[0] >= events[-1][1]:
